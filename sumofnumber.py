@@ -12,11 +12,11 @@
 
 
 def main():
-
+   
     try:
         # initialize the loop counter and sum
         loop_counter = 0
-        sum = 0
+        sum = 0 
 
         # get the user number as a string
         user_number = int(input("Enter a positive number: "))
@@ -29,14 +29,17 @@ def main():
         while (loop_counter <= user_number):
             sum = sum + loop_counter
             print("Tracking {0} times through loop.".format(loop_counter))
-            loop_counter = loop_counter + 1
-
-            print("")
+            loop_counter = loop_counter + 1 
+        if user_number > 0: 
             print ("The sum of the numbers from 0 to {} is: {}.".format(
                 user_number, sum))
+        
     # error control
     except ValueError:
-        print("{} is not a postive integer".format(user_number))
+        print("invalid input") 
+        print("")
+    else:
+        print("")
     finally:
         print("thanks for using this program")
 
